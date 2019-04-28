@@ -1,0 +1,11 @@
+{% if all_quizzes %}
+<ul>
+    <h3>Here are all quizzes </h3>
+    {% for quiz in all_quizzes %}
+    <li><a href="/quizRecommendation/{{ quiz.id }}/">{{ quiz.quizProgrammingLanguage }}</a> </li>
+    {% endfor %}
+</ul>
+{% else %}
+<h3>you don't have any quizzes</h3>
+{% endif %}
+

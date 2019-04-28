@@ -1,0 +1,11 @@
+{% if all_company %}
+<ul>
+    <h3>Here are all companies </h3>
+    {% for company in all_company %}
+    <li><a href="/companyRecommendation/{{ company.id }}/">{{ company.companyName }}</a> </li>
+    {% endfor %}
+</ul>
+{% else %}
+<h3>you don't have any company</h3>
+{% endif %}
+
