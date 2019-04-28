@@ -1,0 +1,11 @@
+{% if all_users %}
+<ul>
+    <h3>Here are all users </h3>
+    {% for user in all_users %}
+    <li><a href="/userRecommendation/{{ user.id }}/">{{ user.userName }}</a> </li>
+    {% endfor %}
+</ul>
+{% else %}
+<h3>you don't have any users</h3>
+{% endif %}
+
